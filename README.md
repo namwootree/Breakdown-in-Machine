@@ -46,16 +46,16 @@
 
 ## 프로세스
 
-### Understading Domain (Audio)
+### Understading Domain (Audio) [Link](https://github.com/namwootree/Breakdown-in-Machine/blob/main/Feature_Extraction_in_Audio.ipynb)
 * 효과적인 Feature Extraction을 수행하기 위해서는 음향 데이터에 대한 충분한 이해가 필요했다.
 * 아날로그 신호, 진폭, 주파수, 위상, 대역폭, 스팩트럼 등과 같은 기본적인 개념과 wav 파일로 부터 추출하는 있는 Feature들의 개념을 공부하였다.
 
-### EDA
+### EDA [Link](https://github.com/namwootree/Breakdown-in-Machine/blob/main/EDA.ipynb)
 * 모든 파일이 동일한 Sampling Rate를 가지는 것을 확인하였다.
 * Fan Type 별로 3개의 샘플을 선택하여 다양한 Feature들을 시각화하였다.
 * 특히 MFCC로 Feature Extraction를 수행한 결과를 히스토그램과 박스 플랏을 표현해보았을 때, Fan Type 별로 분포가 다르다는 것을 확인할 수 있었다.
 
-### Preprocessing
+### Preprocessing [Link](https://github.com/namwootree/Breakdown-in-Machine/blob/main/MFCC_Zero_Crossing_Rate_RMS_Spectral_Flatness_%EA%B8%B0%EB%B0%98_%ED%94%BC%EC%B2%98_%EC%B6%94%EC%B6%9C_%2B_RobustScaler_%2B_SparsePCA_%26_KernelPCA_%2B_LOF.ipynb)
 
 #### Feature Extraction
 * MFCC를 기반으로 전진선택법을 통해 다양한 Feature들을 추가하였다. (Zero Crossing Rate, RMS, Poly Feature, Spectral Flatness)
@@ -81,7 +81,7 @@
 
 ## 느낀 점
 
-### 과대 적합 문제 발생
+### 과대 적합 문제 발생 [Link](https://github.com/namwootree/Breakdown-in-Machine/blob/main/%E1%84%80%E1%85%A2%E1%84%89%E1%85%A5%E1%86%AB%E1%84%83%E1%85%AC%E1%86%AB%20%E1%84%86%E1%85%A5%E1%84%89%E1%85%B5%E1%86%AB%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%20%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%8C%E1%85%B5%E1%84%82%E1%85%B5%E1%84%8B%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC.ipynb)
 * Public Score로는 순위가 4등에 해당하였지만 Private Score로는 18등에 불과하였다.
 * 일반화에 문제가 있다고 판단하여 모델링 부분에서 개선하고자 하였다.
 * LOF의 하이퍼 파라미터 중 'p'를 1로 설정하여 데이터 간의 거리를 멘하탄 거리를 사용함으로써 각 차원 간의 거리가 더 반영되도록 하였다.
